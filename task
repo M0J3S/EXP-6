@@ -1,0 +1,52 @@
+#include<iostream> using
+namespace std; class
+Shape
+{
+ public:
+ double x,y;
+void input()
+ {
+ cin>>x>>y;
+ }
+ virtual void show()
+ {
+
+ }
+};
+
+class Triangle:public Shape
+{
+ public:
+void show()
+ {
+ cout<<"\nBase ="<<x; cout<<"\nHeight
+="<<y; cout<<"\nArea of triangle
+="<<0.5*x*y<<endl;
+ }
+};
+
+class Rectangle:public Shape
+{
+ public:
+void show()
+ {
+ cout<<"\nthe length of first side of rectangle is = "<<x;
+cout<<"\nthe length of second side of rectangle is = "<<y;
+cout<<"\nArea of rectangle = "<<x*y<<endl;
+ }
+};
+
+int main()
+{
+ Triangle t; Shape *s = &t; cout<<"Please enter the
+base and height of the triangle : ";
+ s->input(); s-
+>show(); Rectangle r;
+Shape *s1 = &r;
+cout<<"\n\nPlease
+enter the length of first
+and second side of
+rectangle : ";
+ s1->input(); s1-
+>show(); return 0;
+} 
